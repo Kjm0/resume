@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kareem Farooq – IT Support Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1117;
+            --card: #161b22;
+            --accent: #00ff9d;
+            --text: #e6edf3;
+            --text-secondary: #8b949e;
+            --border: #30363d;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 4rem 1rem;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        header { text-align: center; padding-bottom: 4rem; border-bottom: 1px solid var(--border); }
+        .photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 1.5rem auto;
+            border: 4px solid var(--accent);
+            object-fit: cover;
+            background: var(--card);
+            box-shadow: 0 0 30px rgba(0, 255, 157, 0.2);
+        }
+        .photo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--accent);
+            background: linear-gradient(135deg, #1a1f27, #161b22);
+        }
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ffffff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { font-size: 1.3rem; color: var(--text-secondary); margin-top: 0.5rem; }
+        .contact { margin-top: 1.2rem; font-size: 1.05rem; }
+        .contact a { color: var(--accent); text-decoration: none; margin: 0 14px; transition: all 0.2s; }
+        .contact a:hover { opacity: 0.8; }
+        section { margin: 5rem 0; }
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1.8rem;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 70px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        .job {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            margin-bottom: 1.8rem;
+            transition: all 0.3s ease;
+        }
+        .job:hover { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(0,255,157,0.15); }
+        .job-title { font-size: 1.4rem; font-weight: 600; color: white; }
+        .company { font-size: 1.15rem; color: var(--accent); font-weight: 500; margin: 0.3rem 0; }
+        .date { font-size: 0.98rem; color: var(--text-secondary); margin-bottom: 1rem; font-weight: 500; }
+        ul { padding-left: 1.5rem; }
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        li::marker { color: var(--accent); font-size: 1.2em; }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.2rem;
+        }
+        .skill {
+            background: rgba(0,255,157,0.1);
+            padding: 1rem 1.4rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0,255,157,0.25);
+            text-align: center;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+        .certs-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .cert-item {
+            background: var(--card);
+            padding: 1rem 1.4rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.2s;
+        }
+        .cert-item:hover { background: rgba(0,255,157,0.08); }
+        .cert-item a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .cert-item a:hover { color: var(--accent); }
+        footer {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border);
+            margin-top: 6rem;
+        }
+        @media print {
+            body { background: white; color: black; padding: 0.5rem; }
+            .job:hover, .cert-item:hover { transform: none; box-shadow: none; }
+            a { color: blue; text-decoration: underline; }
+            h1 { background: none; -webkit-text-fill-color: black; }
+            .photo { border: 2px solid #000; }
+            :root { --accent: #000; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.6rem; }
+            .photo { width: 130px; height: 130px; }
+            .job { padding: 1.6rem; }
+            .certs-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kareem Farooq</h1>
+            <div class="subtitle">IT Support Specialist</div>
+            <div class="contact">
+                <a href="tel:+201550602472">+20 155 060 2472</a> •
+                <a href="mailto:kareemfarooq77@gmail.com">kareemfarooq77@gmail.com</a> •
+                Cairo, Egypt •
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Results-driven IT Support Specialist with 7+ years of experience in technical support and customer success at high-growth companies including <strong>Tabby (Fintech)</strong> and <strong>Amazon</strong>. Promoted internally within 3 months at Tabby for exceptional problem-solving. Expert in Windows troubleshooting, Active Directory, Office 365 administration, PowerShell automation, and remote support. Recently completed the <strong>Google Cybersecurity Professional Certificate</strong> to expand into security-focused IT roles.</p>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job">
+                <div class="job-title">Help Desk Technician</div>
+                <div class="company">Tabby – Buy Now, Pay Later Fintech (Remote)</div>
+                <div class="date">January 2024 – Present</div>
+                <ul>
+                    <li>Promoted to Help Desk within 3 months; independently own complex technical incidents using Jira & ServiceNow.</li>
+                    <li>Resolve 90% of Active Directory tickets (password resets, unlocks, domain joins) within 5-minute SLA.</li>
+                    <li>Diagnose and fix 70% of Windows/macOS issues via CLI (PowerShell, gpupdate, netsh, ipconfig) without GUI access.</li>
+                    <li>Administer Office 365 tenancy: MFA resets, license assignment, Exchange/OneDrive/Teams troubleshooting.</li>
+                    <li>Deploy Group Policy for drive mapping, software restrictions, USB blocking, and update enforcement.</li>
+                    <li>Rapid remote support via RDP, Quick Assist, TeamViewer, and AnyDesk with near-instant connectivity.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Customer Service Associate → Tier 2 Escalations & Trainer</div>
+                <div class="company">Amazon Australia</div>
+                <div class="date">June 2020 – December 2023</div>
+                <ul>
+                    <li>Handled Tier 2 escalations for account, payment, and delivery issues across Australia & New Zealand.</li>
+                    <li>Trained 85+ new hires as designated SME; created long-lasting training materials still in use.</li>
+                    <li>Consistently ranked in top 5% for CSAT; reduced repeat contacts by 30% via root-cause resolution.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Database Manager & Analyst</div>
+                <div class="company">Peking Restaurant Chain (8 locations)</div>
+                <div class="date">January 2018 – May 2020</div>
+                <ul>
+                    <li>Built and maintained inventory/menu database; automated reporting with SQL and Python.</li>
+                    <li>Reduced food waste by 12% and prevented stock-outs using predictive analytics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill">Active Directory & Azure AD</div>
+                <div class="skill">PowerShell & Command Line</div>
+                <div class="skill">Office 365 / Microsoft 365 Admin</div>
+                <div class="skill">Remote Support (RDP, TeamViewer)</div>
+                <div class="skill">Jira • ServiceNow • Zendesk</div>
+                <div class="skill">Group Policy • Event Viewer</div>
+                <div class="skill">TCP/IP • DNS • DHCP • VPN</div>
+                <div class="skill">Linux • Python • SQL</div>
+                <div class="skill">Cybersecurity Fundamentals</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <p><strong>Google Cybersecurity Professional Certificate</strong> — 2025</p>
+            <div class="certs-list">
+                <div class="cert-item">
+                    <a href="https://www.coursera.org/account/accomplishments/records/9AKZTXX403EX" target="_blank">
+                    Foundations of Cybersecurity
+                    </a>
+                </div>
+                <div class="cert-item">
+                    <a href="https://www.coursera.org/account/accomplishments/records/GX69S35VP6MU" target="_blank">
+                    Python Automation
+                    </a>
+                </div>
+                <div class="cert-item">
+                    <a href="https://www.coursera.org/account/accomplishments/records/HLWLIEWOB9VW" target="_blank">
+                    Risk Management
+                    </a>
+                </div>
+                <div class="cert-item">
+                    <a href="https://www.coursera.org/account/accomplishments/records/1E9XMR1HD6VU" target="_blank">
+                    Assets, Threats, and Vulnerabilities
+                    </a>
+                </div>
+                <div class="cert-item">
+                    <a href="https://www.coursera.org/account/accomplishments/records/YIXSF61YLB28" target="_blank">
+                    Detection and Response
+                    </a>
+                </div>
+                <div class="cert-item">
+                    <a href="https://www.coursera.org/account/accomplishments/records/CDRBRCXF20US" target="_blank">
+                    Networks & Network Security
+                    </a>
+                </div>
+                <div class="cert-item">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/PQ0IETGLS2XC" target="_blank">
+                    Prepare for Cybersecurity Jobs
+                    </a>
+                </div>
+                <div class="cert-item">
+                    <a href="https://www.coursera.org/account/accomplishments/records/GX69S35VP6MU" target="_blank">
+                    Linux and SQL
+                    </a>
+                </div>
+            </div>
+                        <p style="margin-top: 2rem; font-size: 1.05rem; color: var(--text-secondary);">
+                <strong>Currently Preparing:</strong><br>
+                • CompTIA A+ (Core 1 & Core 2) – Following Professor Messer’s video series<br>
+                • CompTIA Security+ (SY0-701) – Actively studying with Professor Messer and practical labs<br>
+                <em>Target exam dates: Q1 2026</em>
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="job" style="background:transparent; border:none; padding:0; padding-left:0;">
+                <strong>Bachelor’s Degree in Languages and Communication</strong><br>
+                Higher Institute for Specialized Studies (Affiliated with Cairo University) — 2021–2025
+            </div>
+        </section>
+
+        <footer>
+            © 2025 Kareem Farooq — Actively seeking IT Support, Help Desk, Technical Support, or Cybersecurity Analyst roles<br>
+            Available for remote or hybrid opportunities
+        </footer>
+    </div>
+</body>
+
+</html>
+
