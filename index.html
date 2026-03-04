@@ -123,6 +123,43 @@
             font-weight: 500;
         }
         .cert-item a:hover { color: var(--accent); }
+        .blog-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+        .blog-qr {
+            flex-shrink: 0;
+        }
+        .blog-qr img {
+            width: 200px;
+            height: 200px;
+            border: 3px solid var(--accent);
+            border-radius: 8px;
+            background: white;
+            padding: 8px;
+        }
+        .blog-link {
+            flex: 1;
+        }
+        .blog-link p {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        .blog-link a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .blog-link a:hover {
+            opacity: 0.8;
+        }
         footer {
             text-align: center;
             padding: 4rem 0 2rem;
@@ -132,12 +169,8 @@
             margin-top: 6rem;
         }
         @media print {
-            body { background: white; color: black; padding: 0.5rem; }
-            .job:hover, .cert-item:hover { transform: none; box-shadow: none; }
-            a { color: blue; text-decoration: underline; }
-            h1 { background: none; -webkit-text-fill-color: black; }
-            .photo { border: 2px solid #000; }
-            :root { --accent: #000; }
+            /* only request exact colour printing; otherwise let screen styles apply */
+            body { -webkit-print-color-adjust: exact; color-adjust: exact; }
         }
         @media (max-width: 768px) {
             h1 { font-size: 2.6rem; }
@@ -281,7 +314,7 @@
             </div>
         </section>
 
-                <section>
+        <section>
             <h2>Blog</h2>
             <div class="blog-section">
                 <div class="blog-qr">
@@ -302,4 +335,3 @@
 </body>
 
 </html>
-
